@@ -1,0 +1,56 @@
+{
+  "nombre_dataset": "Smart Warehouse GridWorld Dataset",
+  "descripcion": "Dataset sintético para comparar SARSA, Q-Learning y Monte Carlo en un gemelo digital simplificado de un almacén inteligente.",
+  "leyenda": {
+    "S": "inicio_robot",
+    "G": "zona_entrega",
+    "X": "estanteria",
+    "R": "zona_congestionada",
+    ".": "pasillo_libre"
+  },
+  "recompensas": {
+    "llegar_zona_entrega": 100,
+    "movimiento_pasillo": -1,
+    "entrar_zona_congestionada": -10,
+    "fuera_del_almacen": -5,
+    "choque_estanteria": -5,
+    "estado_terminal": 0
+  },
+  "acciones": [
+    "arriba",
+    "abajo",
+    "izquierda",
+    "derecha"
+  ],
+  "mapas": {
+    "almacen_5x5_baja": [
+      "S..X.",
+      ".X.X.",
+      ".X...",
+      "..RX.",
+      "X...G"
+    ],
+    "almacen_8x8_media": [
+      "S...X...",
+      ".XX.X.X.",
+      "...X...R",
+      "X.XXX.X.",
+      "..R...X.",
+      ".X.X.X..",
+      ".X...R..",
+      "...XX..G"
+    ],
+    "almacen_10x10_alta": [
+      "S..X......",
+      ".X.X.XXX..",
+      ".X...R....",
+      ".XXX.XXXX.",
+      "...R....X.",
+      "XX.XXXX.X.",
+      "...X..R.X.",
+      ".X...XX...",
+      ".XXX....X.",
+      ".....XX..G"
+    ]
+  }
+}
